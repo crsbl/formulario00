@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import formSurvey from './img/form_survey_icon.svg'
 import { useDispatch, useSelector } from "react-redux";
 import typeGlobal from "./state/global/type";
 import Modal from "./components/modal";
@@ -14,7 +15,7 @@ function App() {
       <div className="App">
         <Modal />
         <header className="App-header">
-          <h2>Formulario en proceso</h2>
+         <img src={formSurvey}></img> <h2>Formulario en proceso</h2>
         </header>
         <main>
           <section>
