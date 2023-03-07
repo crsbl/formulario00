@@ -8,7 +8,10 @@ body,
   overflow: hidden; 
 
 }
+.App {
+  overflow: scroll; 
 
+}
 *{
   margin: 0;
   padding: 0;

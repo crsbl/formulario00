@@ -1,4 +1,5 @@
 import "../style/ShipmentInformation/index.css";
+import "../style/ShipmentInformation/indexResponsive.css";
 import typeContactInformation from "../state/shipmentInformation/type";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -61,7 +62,7 @@ const ShipmentInformation = () => {
             name="name"
           />
         </label>
-        </div>
+      </div>
     </div>
   );
 };

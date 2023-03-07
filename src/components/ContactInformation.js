@@ -1,4 +1,5 @@
 import "../style/ContactInformation/index.css";
+import "../style/ContactInformation/indexResponsive.css";
 import typeGlobal from "../state/global/type";
 import typeContactInformation from "../state/contactInformation/type";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 const ContactInformation = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.contactInformation);
-console.log(selector)
+  console.log(selector);
   const changeInputs = (e, typeSelection) => {
     dispatch({
       type: typeSelection,
@@ -39,7 +40,7 @@ console.log(selector)
             type="text"
           />
         </label>
-        </div>
+      </div>
     </div>
   );
 };

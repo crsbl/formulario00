@@ -1,0 +1,7 @@
+@media only screen and (max-width: 750px){
+    .divContainerPersonalInformation00 > div {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+      }
+}

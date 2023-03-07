@@ -1,0 +1,8 @@
+@media only screen and (max-width: 750px){
+    .divContainerModal00 > div {
+      height: 100vw;
+      overflow: scroll;
+        grid-template-columns: auto ;
+       
+      }
+}

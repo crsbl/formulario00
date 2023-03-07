@@ -1,0 +1,14 @@
+@media only screen and (max-width: 750px) {
+
+    main > section:nth-child(1) {
+    gap: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 2rem 0 0rem 0;
+  }
+  main > section:nth-child(2) > form > div:nth-child(2) {
+    flex-flow: column nowrap;
+align-items: center;
+  }
+}

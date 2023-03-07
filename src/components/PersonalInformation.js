@@ -1,5 +1,5 @@
 import "../style/PersonalInformation/index.css";
-
+import "../style/PersonalInformation/indexResponsive.css";
 import typePersonalInformation from "../state/personalInformation/type";
 import { useDispatch, useSelector } from "react-redux";
 

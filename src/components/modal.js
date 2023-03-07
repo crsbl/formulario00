@@ -1,4 +1,5 @@
 import "../style/modal/index.css";
+import "../style/modal/indexResponsive.css";
 import { useDispatch, useSelector } from "react-redux";
 const Modal = () => {
   const dispatch = useDispatch();

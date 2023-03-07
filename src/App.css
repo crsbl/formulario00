@@ -49,6 +49,7 @@ main > section:nth-child(2) > form> div:nth-child(2){
   flex-flow: row nowrap;
 gap:1rem;
 justify-content: center;
+padding: 2rem 0 0 0;
 }
 input {
   font-size: 1.3rem;
