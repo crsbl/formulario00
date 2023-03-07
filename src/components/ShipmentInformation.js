@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 const ShipmentInformation = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.shipmentInformation);
- console.log(selector)
+  console.log(selector);
   const changeInputs = (e, typeSelection) => {
     dispatch({
       type: typeSelection,
@@ -16,7 +16,7 @@ const ShipmentInformation = () => {
   return (
     <div className="divContainerShipmentInformation00">
       <h1>Información de envío</h1>
-      <form>
+      <div>
         <label>
           País:
           <input
@@ -60,9 +60,8 @@ const ShipmentInformation = () => {
             type="text"
             name="name"
           />
-        </label>{" "}
-        <button onClick={() => {}}>Continuar</button>
-      </form>
+        </label>
+        </div>
     </div>
   );
 };

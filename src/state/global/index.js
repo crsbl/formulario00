@@ -20,6 +20,13 @@ function rootReducer(state = estadoInicial, accion) {
         ...state,
           stateSelection: accion.payload,
       };
+      case typeState.CHANGE_GLOBAL_STATE_MODAL:
+        return {
+          ...state,
+          stateModal: accion.payload,
+        };
+
+      
     default:
       return state;
   }

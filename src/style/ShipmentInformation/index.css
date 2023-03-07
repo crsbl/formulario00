@@ -1,15 +1,19 @@
-.divContainerShipmentInformation00 > form {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-  }
-  .divContainerShipmentInformation00 {
-      display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    }
-  .divContainerShipmentInformation00 > form > label {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-  
+.divContainerShipmentInformation00 > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+.divContainerShipmentInformation00 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 2rem;
+}
+.divContainerShipmentInformation00 > div > label {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.divContainerShipmentInformation00 > h1 {
+  padding: 0 0 2rem 0;
+}

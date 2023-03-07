@@ -17,7 +17,7 @@ console.log(selector)
   return (
     <div className="divContainerContactInformation00">
       <h1>Información de contacto</h1>
-      <form>
+      <div>
         <label>
           Telefono:
           <input
@@ -39,18 +39,7 @@ console.log(selector)
             type="text"
           />
         </label>
-
-        <button
-          onClick={() => {
-            dispatch({
-              type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,
-              payload: 2,
-            });
-          }}
-        >
-          Continuar
-        </button>
-      </form>
+        </div>
     </div>
   );
 };

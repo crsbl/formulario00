@@ -5,9 +5,11 @@ header {
   padding: 1rem 0 1rem 0;
 }
 
-header > h1 {
+header > h2 {
   font-family: Montserrat, sans-serif;
   color: white;
+  outline: none;
+  user-select: none;
 }
 
 main > section:nth-child(1) {
@@ -15,7 +17,7 @@ main > section:nth-child(1) {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0 0rem 0;
 }
 
 main > section:nth-child(1) > div {
@@ -26,8 +28,8 @@ main > section:nth-child(1) > div {
   align-items: center;
 }
 
-main > section:nth-child(1) > div > h2:nth-child(1){
-  border:solid .1rem black;
+main > section:nth-child(1) > div > h2:nth-child(1) {
+  border: solid 0.1rem black;
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -38,14 +40,21 @@ main > section:nth-child(1) > div > h2:nth-child(1){
 
 main > section:nth-child(2) {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-
+main > section:nth-child(2) > form> div:nth-child(2){
+  display: flex;
+  flex-flow: row nowrap;
+gap:1rem;
+justify-content: center;
+}
 input {
   font-size: 1.3rem;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
+  padding: .2rem;
 }
 
 label {
@@ -57,11 +66,16 @@ h2 {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
 }
+h3 {
+/*   font-family: Montserrat, sans-serif;
+  font-weight: 600; */
+}
 h1 {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
 }
 button {
+  padding: .2rem;
   font-size: 1.3rem;
   font-family: Montserrat, sans-serif;
   font-weight: 600;

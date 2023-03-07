@@ -1,10 +1,9 @@
 import "../style/PersonalInformation/index.css";
-import typeGlobal from "../state/global/type";
+
 import typePersonalInformation from "../state/personalInformation/type";
 import { useDispatch, useSelector } from "react-redux";
 
 const PersonalInformation = () => {
-  /*   const selector = useSelector((state) => state); */
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.personalInformation);
 
@@ -18,11 +17,7 @@ const PersonalInformation = () => {
   return (
     <div className="divContainerPersonalInformation00">
       <h1>Información de perfil</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
+  <div>
         <label>
           Nombres:
           <input
@@ -165,28 +160,7 @@ const PersonalInformation = () => {
             </div>
           </div>
         </label>
-
-        <button
-          onClick={() => {
-            if (
-              !selector.comboBoxCivilStatus.selection.length ||
-              !selector.comboBoxGender.selection ||
-              !selector.inputAge ||
-              !selector.inputLastName ||
-              !selector.inputName 
-            ) {
-              alert("faltan datos");
-            } else {
-              dispatch({
-                type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,
-                payload: 1,
-              });
-            }
-          }}
-        >
-          Continuar
-        </button>
-      </form>
+        </div>
     </div>
   );
 };

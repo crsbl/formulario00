@@ -1,4 +1,4 @@
-.divContainerPersonalInformation00 > form {
+.divContainerPersonalInformation00 > div {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
@@ -7,30 +7,31 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-}
-
-.divContainerPersonalInformation00 > h1{
   padding: 2rem;
 }
 
-.divContainerPersonalInformation00 > form > label {
+.divContainerPersonalInformation00 > h1{
+  padding: 0 0 2rem 0;
+}
+
+.divContainerPersonalInformation00 > div > label {
   display: flex;
   flex-flow: column nowrap;
 }
-.divContainerPersonalInformation00 > form > label > div {
+.divContainerPersonalInformation00 > div > label > div {
   display: flex;
   flex-flow: column nowrap;
 
 }
-.divContainerPersonalInformation00 > form > label > div > input {
+.divContainerPersonalInformation00 > div > label > div > input {
   cursor: pointer;
 }
-.divContainerPersonalInformation00 > form > label div > div {
+.divContainerPersonalInformation00 > div > label div > div {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
 }
-.divContainerPersonalInformation00 > form > label > div > div > div {
+.divContainerPersonalInformation00 > div > label > div > div > div {
   position: absolute;
   background-color: white;
   display: flex;
