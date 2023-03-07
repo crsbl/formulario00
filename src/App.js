@@ -63,9 +63,10 @@ function App() {
                 </button>
                 <button
                   onClick={() => {
+                    const expressionMail = /\S+@\S+\.\S+/;
+                    const expressionName = /^[a-zA-Z\s]*$/;
                     switch (selector.global.stateSelection) {
                       case 0:
-                        const expressionName = /^[a-zA-Z\s]*$/;
                         if (
                           !selector.personalInformation.comboBoxCivilStatus
                             .selection ||
@@ -90,7 +91,6 @@ function App() {
                         }
                         break;
                       case 1:
-                        const expressionMail = /\S+@\S+\.\S+/;
                         if (
                           !selector.contactInformation.inputPhone ||
                           !expressionMail.test(
