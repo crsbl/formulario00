@@ -1,0 +1,14 @@
+.divContainerContactInformation00 > form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+.divContainerContactInformation00 {
+    display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  }
+.divContainerContactInformation00 > form > label {
+  display: flex;
+  flex-flow: column nowrap;
+}

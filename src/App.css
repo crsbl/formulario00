@@ -1,0 +1,68 @@
+header {
+  background-color: rgb(122, 152, 172);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 1rem 0;
+}
+
+header > h1 {
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+
+main > section:nth-child(1) {
+  gap: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 2rem 0 1rem 0;
+}
+
+main > section:nth-child(1) > div {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+main > section:nth-child(1) > div > h2:nth-child(1){
+  border:solid .1rem black;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+main > section:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-size: 1.3rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+label {
+  font-size: 1.3rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+button {
+  font-size: 1.3rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}

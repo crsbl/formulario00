@@ -1,0 +1,42 @@
+.divContainerPersonalInformation00 > form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+.divContainerPersonalInformation00 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.divContainerPersonalInformation00 > h1{
+  padding: 2rem;
+}
+
+.divContainerPersonalInformation00 > form > label {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.divContainerPersonalInformation00 > form > label > div {
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+.divContainerPersonalInformation00 > form > label > div > input {
+  cursor: pointer;
+}
+.divContainerPersonalInformation00 > form > label div > div {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.divContainerPersonalInformation00 > form > label > div > div > div {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 99%;
+  border-left: 0.1rem solid red;
+  border-right: 0.1rem solid red;
+  border-bottom: 0.1rem solid red;
+}
