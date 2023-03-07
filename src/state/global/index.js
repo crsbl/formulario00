@@ -7,7 +7,7 @@ const estadoInicial = {
     stateSelection: 0,
     arraySelection: [
       { name: "Información de perfil", component: <PersonalInformation /> },
-      { name: "Contact information", component: <ContactInformation /> },
+      { name: "Información de contacto", component: <ContactInformation /> },
       { name: "Información de envío", component: <ShipmentInformation /> },
     ],
     stateModal:false,

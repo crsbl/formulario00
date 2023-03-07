@@ -58,7 +58,7 @@ const ShipmentInformation = () => {
             onChange={(e) => {
               changeInputs(e, typeContactInformation.STATE_INPUT_POSTAL_CODE);
             }}
-            type="text"
+            type="number"
             name="name"
           />
         </label>

@@ -65,6 +65,7 @@ function App() {
                   onClick={() => {
                     switch (selector.global.stateSelection) {
                       case 0:
+                        const expressionName = /^[a-zA-Z\s]*$/;
                         if (
                           !selector.personalInformation.comboBoxCivilStatus
                             .selection ||
@@ -72,9 +73,15 @@ function App() {
                             .selection ||
                           !selector.personalInformation.inputAge ||
                           !selector.personalInformation.inputLastName ||
-                          !selector.personalInformation.inputName
+                          !selector.personalInformation.inputName ||
+                          !expressionName.test(
+                            selector.personalInformation.inputName
+                          ) ||
+                          !expressionName.test(
+                            selector.personalInformation.inputLastName
+                          )
                         ) {
-                          alert("faltan datos");
+                          alert("Faltan datos o datos incorrecto");
                         } else {
                           dispatch({
                             type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,
@@ -83,11 +90,14 @@ function App() {
                         }
                         break;
                       case 1:
+                        const expressionMail = /\S+@\S+\.\S+/;
                         if (
                           !selector.contactInformation.inputPhone ||
-                          !selector.contactInformation.inputMail
+                          !expressionMail.test(
+                            selector.contactInformation.inputMail
+                          )
                         ) {
-                          alert("faltan datos");
+                          alert("Faltan datos o datos incorrecto");
                         } else {
                           dispatch({
                             type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,

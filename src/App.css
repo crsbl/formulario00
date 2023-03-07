@@ -44,18 +44,18 @@ main > section:nth-child(2) {
   justify-content: center;
   align-items: center;
 }
-main > section:nth-child(2) > form> div:nth-child(2){
+main > section:nth-child(2) > form > div:nth-child(2) {
   display: flex;
   flex-flow: row nowrap;
-gap:1rem;
-justify-content: center;
-padding: 2rem 0 0 0;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 0 0 0;
 }
 input {
   font-size: 1.3rem;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 label {
@@ -68,7 +68,7 @@ h2 {
   font-weight: 600;
 }
 h3 {
-/*   font-family: Montserrat, sans-serif;
+  /*   font-family: Montserrat, sans-serif;
   font-weight: 600; */
 }
 h1 {
@@ -76,7 +76,7 @@ h1 {
   font-weight: 600;
 }
 button {
-  padding: .2rem;
+  padding: 0.2rem;
   font-size: 1.3rem;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
