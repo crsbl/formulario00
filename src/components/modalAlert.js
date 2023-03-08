@@ -1,4 +1,5 @@
 import "../style/modalAlert/index.css";
+import "../style/modalAlert/indexResponsive.css";
 import acceptSvg from "../img/modalAlert/accept.svg";
 import dangerSvg from "../img/modalAlert/danger.svg";
 import errorSvg from "../img/modalAlert/error.svg";
