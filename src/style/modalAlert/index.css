@@ -12,6 +12,7 @@
   right: 2rem;
   top: 1rem;
   transition: .5s;
+  box-shadow:0 0 1rem .05rem rgba(2, 2, 2, 0.548);
 }
 
 .divContainerModalAlert00 > div {
