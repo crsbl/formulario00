@@ -1,8 +1,9 @@
 import logo from "./logo.svg";
-import formSurvey from './img/form_survey_icon.svg'
+import formSurvey from "./img/form_survey_icon.svg";
 import { useDispatch, useSelector } from "react-redux";
 import typeGlobal from "./state/global/type";
 import Modal from "./components/modal";
+import ModalAlert from "./components/modalAlert";
 import "./App.css";
 import "./AppResponsive.css";
 
@@ -14,8 +15,16 @@ function App() {
     <>
       <div className="App">
         <Modal />
+
+        {selector.global.ModalAlert.state === true && (
+          <ModalAlert
+            type={selector.global.ModalAlert.type}
+            message={selector.global.ModalAlert.message}
+          />
+        )}
+
         <header className="App-header">
-         <img src={formSurvey}></img> <h2>Formulario en proceso</h2>
+          <img src={formSurvey}></img> <h2>Formulario en proceso</h2>
         </header>
         <main>
           <section>
@@ -58,6 +67,14 @@ function App() {
                       type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,
                       payload: selector.global.stateSelection - 1,
                     });
+                    dispatch({
+                      type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                      payload: {
+                        state: false,
+                        type: "",
+                        message: "",
+                      },
+                    });
                   }}
                 >
                   Atras
@@ -83,8 +100,23 @@ function App() {
                             selector.personalInformation.inputLastName
                           )
                         ) {
-                          alert("Faltan datos o datos incorrecto");
+                          dispatch({
+                            type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                            payload: {
+                              state: true,
+                              type: "error",
+                              message: "Faltan datos o estan erroneos",
+                            },
+                          });
                         } else {
+                          dispatch({
+                            type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                            payload: {
+                              state: false,
+                              type: "",
+                              message: "",
+                            },
+                          });
                           dispatch({
                             type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,
                             payload: 1,
@@ -98,11 +130,26 @@ function App() {
                             selector.contactInformation.inputMail
                           )
                         ) {
-                          alert("Faltan datos o datos incorrecto");
+                          dispatch({
+                            type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                            payload: {
+                              state: true,
+                              type: "error",
+                              message: "Faltan datos o estan erroneos",
+                            },
+                          });
                         } else {
                           dispatch({
                             type: typeGlobal.CHANGE_GLOBAL_STATE_SELECTION,
                             payload: 2,
+                          });
+                          dispatch({
+                            type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                            payload: {
+                              state: false,
+                              type: "",
+                              message: "",
+                            },
                           });
                         }
                         break;
@@ -113,11 +160,26 @@ function App() {
                           !selector.shipmentInformation.inputAddress ||
                           !selector.shipmentInformation.postalCode
                         ) {
-                          alert("faltan datos");
+                          dispatch({
+                            type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                            payload: {
+                              state: true,
+                              type: "error",
+                              message: "Faltan datos",
+                            },
+                          });
                         } else {
                           dispatch({
                             type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL,
                             payload: true,
+                          });
+                          dispatch({
+                            type: typeGlobal.CHANGE_GLOBAL_STATE_MODAL_ALERT,
+                            payload: {
+                              state: true,
+                              type: "accept",
+                              message: "Formulario terminado",
+                            },
                           });
                         }
                         break;
